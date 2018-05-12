@@ -1,14 +1,7 @@
 import fs from 'fs';
 import { split } from 'ramda';
-
-const readFile = inputFileName => {
-    try {
-        var data = fs.readFileSync(inputFileName, 'utf-8');
-        return data;
-    } catch(e) {
-        readExit(inputFileName)
-    };
-}
+import { readExit } from '../src/exit';
+import { readFile } from '../src/utils';
 
 export const getThetas = () => {
     const file = readFile('./data/theta.txt');

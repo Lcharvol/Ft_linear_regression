@@ -8,6 +8,7 @@ import { getTheta0, getTheta1 } from './data/getters';
 import {
     inputLengthExit,
     inputNaNExit,
+    readExit,
 } from './src/exit';
 import print from './src/print';
 
