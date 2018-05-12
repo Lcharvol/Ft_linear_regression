@@ -1,0 +1,1 @@
+export const THETA_FILE_NAME = 'theta.txt';

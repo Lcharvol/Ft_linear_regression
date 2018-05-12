@@ -16,6 +16,9 @@ import {
 } from './src/parser';
 import { readFile } from './src/utils';
 
+
+import { setTheta0 } from './data/setters';
+
 const fileName = checkArgs(process.argv);
 const fileContent = split('\n', readFile(fileName));
 
@@ -27,3 +30,4 @@ const formattedContent = compose(
     removeEmptyLines,
 )(fileContent);
 console.log('formattedContent:', formattedContent);
+setTheta0(56)
