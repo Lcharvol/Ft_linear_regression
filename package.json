@@ -1,0 +1,23 @@
+{
+  "name": "ft-linear-regression",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Lcharvol/Ft_linear_regression",
+  "author": "lcharvol <lcharvol@student.42.fr>",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.38",
+    "@babel/node": "^7.0.0-beta.38",
+    "@babel/preset-env": "^7.0.0-beta.38",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
+    "babel-plugin-transform-do-expressions": "^6.22.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
