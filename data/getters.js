@@ -16,6 +16,6 @@ export const getThetas = () => {
     return data;
 };
 
-export const getTheta0 = () => getThetas()[0];
+export const getTheta0 = () => parseInt(getThetas()[0]);
 
-export const getTheta1 = () => getThetas()[1];
+export const getTheta1 = () => parseInt(getThetas()[1]);
