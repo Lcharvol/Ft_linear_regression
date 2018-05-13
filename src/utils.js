@@ -11,8 +11,4 @@ export const readFile = inputFileName => {
     };
 };
 
-export const writeFile = (path, newData) => {
-    fs.open(path, 'r+' , (err, fd) => {
-        fs.write(fd, newData, err => err)
-    });
-};
+export const writeFile = (path, newData) => fs.writeFileSync(path, newData);

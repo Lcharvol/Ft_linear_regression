@@ -13,3 +13,7 @@ export const setTheta1 = newTethas1 => {
     const newThetas = [thetas[0], newTethas1];
     writeFile(`./data/${THETA_FILE_NAME}`, `${newThetas[0]} ${newThetas[1]}`);
 };
+
+export const setThetas = (newTethas0, newTethas1) => {
+    writeFile(`./data/${THETA_FILE_NAME}`, `${newTethas0} ${newTethas1}`);
+}

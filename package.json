@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "estimate": "babel-node estimate.js",
-    "train": "babel-node train.js"
+    "train": "babel-node train.js",
+    "reset": "babel-node src/reset.js"
   },
   "dependencies": {
     "@babel/cli": "^7.0.0-beta.44",

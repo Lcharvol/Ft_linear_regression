@@ -16,6 +16,7 @@ import {
     checkData,
 } from './src/parser';
 import { readFile } from './src/utils';
+import { startLinearRegression } from './src/linearRegression';
 
 
 import { setTheta0 } from './data/setters';
@@ -31,5 +32,4 @@ const formattedContent = compose(
     formateDataStruct,
     removeEmptyLines,
 )(fileContent);
-console.log('formattedContent:', formattedContent);
-setTheta0(56)
+startLinearRegression(formattedContent);
