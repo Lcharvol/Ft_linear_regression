@@ -13,6 +13,7 @@ import {
     getColumnsTiltes,
     getData,
     getCleannedDataStruct,
+    checkData,
 } from './src/parser';
 import { readFile } from './src/utils';
 
@@ -24,6 +25,7 @@ const fileContent = split('\n', readFile(fileName));
 
 const formattedContent = compose(
     getCleannedDataStruct,
+    checkData,
     getData,
     getColumnsTiltes,
     formateDataStruct,

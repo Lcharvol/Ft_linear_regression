@@ -3,6 +3,7 @@ import {
     INPUT_LENGTH_EXIT,
     NAN_EXIT,
     READ_ERROR,
+    COLUMNS_TITLE_ERROR,
 } from './constants';
 import { FgRed } from '../constants/colors';
 
@@ -20,3 +21,8 @@ export const readExit = inputFileName => {
     print(`${READ_ERROR[0]}${inputFileName}${READ_ERROR[1]}`, FgRed);
     process.exit();
 };
+
+export const columnTitleExit = () => {
+    print(`${COLUMNS_TITLE_ERROR}`, FgRed);
+    process.exit();
+}

@@ -4,7 +4,10 @@ import {
     split,
     map,
     drop,
+    contains,
 } from 'ramda';
+
+import { columnTitleExit } from '../exit';
 
 export const removeEmptyLines = initialContent => filter(line => !isEmpty(line),initialContent);
 
@@ -35,3 +38,11 @@ export const getData = dataStruct => {
 };
 
 export const getCleannedDataStruct = dataStruct => dataStruct.data;
+
+export const checkData = dataStruct => {
+    const { titles } = dataStruct;
+    if(!contains('km', titles) || !contains('price', titles)) {
+        columnTitleExit();
+    };
+    return dataStruct;
+}
