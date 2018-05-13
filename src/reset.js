@@ -1,3 +1,3 @@
 import { setThetas } from '../data/setters';
 
-setThetas(1, 1);
+setThetas(0, 0);
