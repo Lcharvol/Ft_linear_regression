@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Graph from './Graph';
+import Graph from './components/Graph';
 
 const root = (
     <Graph/>
