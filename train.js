@@ -32,4 +32,5 @@ const formattedContent = compose(
     formateDataStruct,
     removeEmptyLines,
 )(fileContent);
+console.log('formattedContent : ', formattedContent)
 startLinearRegression(formattedContent);
