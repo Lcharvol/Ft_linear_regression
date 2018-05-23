@@ -5,6 +5,7 @@ import {
     map,
     drop,
     contains,
+    multiply,
 } from 'ramda';
 
 import { columnTitleExit } from '../exit';
@@ -51,4 +52,23 @@ export const checkData = dataStruct => {
     if(!contains(FIRST_COLUMN_NAME, titles) || !contains(SECOND_COLUMN_NAME, titles))
         columnTitleExit();
     return dataStruct;
-}
+};
+
+export const getNormedData = data => {
+    let maxKm = 0;
+    let maxPrice = 0;
+    map(elem => {
+        let { km, price } = elem;
+        if(km > maxKm)
+            maxKm = km;
+        if(price > maxPrice)
+            maxPrice = price;
+    },data);
+    const kmCoef = 100 / maxKm;
+    const priceCoef = 100 / maxPrice;
+    map(elem => {
+        elem.km = multiply(elem.km,kmCoef);
+        elem.price = multiply(elem.price,priceCoef);
+    },data)
+    return data;
+};

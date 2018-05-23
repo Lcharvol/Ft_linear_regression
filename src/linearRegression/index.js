@@ -1,5 +1,6 @@
 import { getTheta0, getTheta1 } from '../../data/getters';
 import { setTheta0, setTheta1 } from '../../data/setters';
+import { ITERATIONS_NUMBERR } from './constants';
 
 export const startLinearRegression = data => {
     // WIP

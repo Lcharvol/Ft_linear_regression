@@ -1,10 +1,13 @@
 import {
     equals,
     length,
+    add,
+    multiply,
 } from 'ramda';
 
 import { getTheta0, getTheta1 } from '../data/getters';
 import { FgGreen } from './constants/colors';
+import { ESTIMATE_LOGS } from './constants/logs';
 import {
     inputLengthExit,
     inputNaNExit,
@@ -13,9 +16,10 @@ import {
 import print from './print';
 
 const checkArgs = args => {
+    const mileAge = process.argv[2];
+
     if(!equals(length(args), 3))
         inputLengthExit();
-    const mileAge = process.argv[2];
     if(!parseInt(mileAge))
         inputNaNExit(mileAge);
     return mileAge;
@@ -28,8 +32,8 @@ const estimate = () => {
     const thetha1 = getTheta1();
 
     // Print the estimate price
-    const estimatePrice = thetha0 + (thetha1 * mileAge);
-    print(`The estimate price of the car for ${mileAge} km is ${estimatePrice} €`, FgGreen);
+    const estimatePrice = add(thetha0,multiply(thetha1,mileAge));
+    print(`${ESTIMATE_LOGS[0]}${mileAge}${ESTIMATE_LOGS[1]}${estimatePrice}${ESTIMATE_LOGS[2]}`, FgGreen);
 };
 
 estimate();
