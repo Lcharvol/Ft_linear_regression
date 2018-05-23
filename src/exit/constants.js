@@ -1,4 +1,4 @@
-export const INPUT_LENGTH_EXIT = 'Error: wrong number of arguments!';
+export const INPUT_LENGTH_EXIT = 'Error: use a .csv file as argument!';
 
 export const NAN_EXIT = 'Error: milage is not a number: "';
 

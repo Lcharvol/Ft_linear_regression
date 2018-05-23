@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack -p",
-    "estimate": "babel-node estimate.js",
+    "estimate": "babel-node src/estimate.js",
     "start:visu": "webpack --watch --display none",
-    "train": "babel-node train.js",
+    "train": "babel-node src/train.js",
     "reset": "babel-node src/reset.js"
   },
   "dependencies": {
@@ -27,6 +27,7 @@
     "browser-sync": "^2.24.4",
     "browser-sync-webpack-plugin": "^2.2.2",
     "connect-history-api-fallback": "^1.5.0",
+    "d3": "^5.4.0",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "ramda": "^0.25.0",

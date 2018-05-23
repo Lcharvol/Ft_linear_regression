@@ -1,10 +1,11 @@
 import fs from 'fs';
 
-import { readExit } from './exit';
+import { readExit } from '../exit';
 
 export const readFile = inputFileName => {
+    const FORMAT = 'utf-8';
     try {
-        var data = fs.readFileSync(inputFileName, 'utf-8');
+        var data = fs.readFileSync(inputFileName, FORMAT);
         return data;
     } catch(e) {
         readExit(inputFileName)
