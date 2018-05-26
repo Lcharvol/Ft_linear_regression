@@ -70,5 +70,29 @@ export const getNormedData = data => {
         elem.km = multiply(elem.km,kmCoef);
         elem.price = multiply(elem.price,priceCoef);
     },data)
-    return data;
+    return {
+       data,
+       maxKm,
+       maxPrice,
+    };
+};
+
+export const getUnNormedRes = (data, type, value) => {
+    let maxValue = 0;
+    let coef = 0;
+    if(type === 'km') {
+        map(elem => {
+            let { km, price } = elem;
+            if(km > maxValue)
+                maxValue = km;
+        },data);
+    } else if(type === 'price') {
+        map(elem => {
+            let { km, price } = elem;
+            if(price > maxValue)
+                maxValue = price;
+        },data);
+    };
+    coef = 100 / maxValue;
+    return value/coef;
 };

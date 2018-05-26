@@ -1,1 +1,1 @@
-export const ITERATIONS_NUMBERR = 10000;
+export const ITERATIONS_NUMBER =10000;
