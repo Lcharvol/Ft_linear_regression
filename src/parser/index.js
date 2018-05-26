@@ -6,6 +6,7 @@ import {
     drop,
     contains,
     multiply,
+    divide,
 } from 'ramda';
 
 import { columnTitleExit } from '../exit';
@@ -67,8 +68,8 @@ export const getNormedData = data => {
     const kmCoef = 100 / maxKm;
     const priceCoef = 100 / maxPrice;
     map(elem => {
-        elem.km = multiply(elem.km,kmCoef);
-        elem.price = multiply(elem.price,priceCoef);
+        elem.km = divide(elem.km,maxKm);
+        elem.price = divide(elem.price,maxPrice);
     },data)
     return {
        data,
